@@ -1,0 +1,15 @@
+.build{
+    height: 500px;
+    
+    overflow: scroll;
+}
+.how{
+    height: 500px;
+    
+    overflow: hidden;
+
+}
+.quantity{
+    margin: 20px;
+    padding: 10px;
+}

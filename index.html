@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <title>LUNDAPP</title>
+  </head>
+  <body>
+    <nav class="navbar bg-dark  h1 sm">
+      <a href="index.html" class="text-white">LUNDAPP</a>
+    </nav>
+    <section class="container-fluid section">
+      <div class="row">
+        <div class="col-8 build">
+          <h1 class="text-center">Interactive UI</h1>
+          <div class="show"></div>
+        </div>
+
+        <div class="col-4 how">
+          <h1>How to use</h1>
+          <h3>Instructions</h3>
+          <ol>
+          <li> click on what you want to wash</li>
+          <li>use the buttons below to add or subtract from it</li>
+          <li>
+            click checkout when you are through picking the cloths you want to
+            wash
+          </li>
+          <li>Made an error? click LUNDAPP to start afresh</li>
+        </ol>
+        </div>
+      </div>
+    </section>
+    <div class="navbar bg-dark h3 ">Select Items</div>
+    <div class="container card">
+      <div class="row">
+        <div class="col-8">
+            
+          <form action="" class="">
+              <div class="form-group">
+            <div class="form-control quantity">
+              Shirts or Gowns
+              <input
+              id="1"
+                type="number"
+                name="quantity"
+                min="0"
+                max="100"
+                value=""
+              />
+            </div>
+            <div class="form-control quantity">
+        Trousers or Skirts
+              <input
+              id="2"
+                type="number"
+                name="quantity"
+                min=""
+                max="100"
+                value=""
+              />
+            </div>
+            <div class="form-control quantity">
+             Jacket
+              <input
+              id="3"
+                type="number"
+                name="quantity"
+                min="0"
+                max="100"
+                value="0"
+              />
+            </div>
+            <div class="form-control quantity">
+             Others
+              <input
+              id="4"
+                type="number"
+                name="quantity"
+                min="0"
+                max="100"
+                value=""
+              
+              />
+            </div>
+            <button id="button">Check out</button>
+          </form>
+        </div>
+    </div>
+        <div class="col-4">
+          <div class="Total Price"></div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+        <ul class="list-group list-group-flush list-group-horizontal p-5">
+            <li class="list-group-item">lagos, Nigeria</li>
+            <li class="list-group-item">copyright @ lundapp</li>
+        </ul>
+
+        <input
+        id="test"
+          type="text"
+          name="quantity"
+          placeholder="enter"
+
+        
+        />
+        <button id="test1"> enter</button>
+    </footer>
+
+    <script src="./main.js"></script>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
