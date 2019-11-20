@@ -16,15 +16,19 @@
       <div class="row">
         <div class="col-8 build">
           <h1 class="text-center">Interactive UI</h1>
-          <div class="show"></div>
+          <div id="show"></div>
         </div>
+      
 
         <div class="col-4 how">
           <h1>How to use</h1>
           <h3>Instructions</h3>
           <ol>
           <li> click on what you want to wash</li>
+          <li>others incluses cloths like underwears, handkerchief etc</li>
           <li>use the buttons below to add or subtract from it</li>
+          <li>Click view order to view your order and cost of service</li>
+          
           <li>
             click checkout when you are through picking the cloths you want to
             wash
@@ -37,14 +41,30 @@
     <div class="navbar bg-dark h3 ">Select Items</div>
     <div class="container card">
       <div class="row">
-        <div class="col-8">
+        <div class="col-6 card">
             
-          <form action="" class="">
+          <form action="" Id="form">
               <div class="form-group">
-            <div class="form-control quantity">
+                  Name
+                  <input
+                  id="name"
+                    type="text"
+                    name="text"
+                    placeholder="enterName"
+                    required
+                  />
+                  Phone Number
+              <input
+              id="telephone"
+                type="tel"
+                name="phone"
+                placeholder="Tel"
+                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required
+              />
+            <div class="">
               Shirts or Gowns
               <input
-              id="1"
+              id="shirts"
                 type="number"
                 name="quantity"
                 min="0"
@@ -52,10 +72,10 @@
                 value=""
               />
             </div>
-            <div class="form-control quantity">
+            <div class="">
         Trousers or Skirts
               <input
-              id="2"
+              id="trousers"
                 type="number"
                 name="quantity"
                 min=""
@@ -63,21 +83,21 @@
                 value=""
               />
             </div>
-            <div class="form-control quantity">
+            <div class="">
              Jacket
               <input
-              id="3"
+              id="jacket"
                 type="number"
                 name="quantity"
                 min="0"
                 max="100"
-                value="0"
+                value=""
               />
             </div>
-            <div class="form-control quantity">
+            <div class="">
              Others
               <input
-              id="4"
+              id="others"
                 type="number"
                 name="quantity"
                 min="0"
@@ -86,31 +106,27 @@
               
               />
             </div>
-            <button id="button">Check out</button>
+            <button id="button">VIEW ORDER</button>
           </form>
         </div>
     </div>
-        <div class="col-4">
-          <div class="Total Price"></div>
+        <div class="col-6">
+          <div  id ="totalPrice"></div>
         </div>
       </div>
     </div>
+<di>
+  <button onclick="myFunction()" >CHECK OUT</button>
+</di>
 
     <footer>
-        <ul class="list-group list-group-flush list-group-horizontal p-5">
-            <li class="list-group-item">lagos, Nigeria</li>
-            <li class="list-group-item">copyright @ lundapp</li>
+        <ul class="">
+            <li class="">lagos, Nigeria</li>
+            <li class="">copyright @ lundapp</li>
         </ul>
 
-        <input
-        id="test"
-          type="text"
-          name="quantity"
-          placeholder="enter"
+     
 
-        
-        />
-        <button id="test1"> enter</button>
     </footer>
 
     <script src="./main.js"></script>
