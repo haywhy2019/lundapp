@@ -9,14 +9,14 @@
     <title>LUNDAPP</title>
   </head>
   <body>
-    <nav class="navbar bg-dark  h1 sm">
-      <a href="index.html" class="text-white">LUNDAPP</a>
+    <nav class="navbar  h1 sm navcol">
+      <a href="index.html" class="link">LUNDAPP</a>
     </nav>
-    <section class="container-fluid section">
+    <section class="container-fluid card section">
       <div class="row">
         <div class="col-8 build">
           <h1 class="text-center">Interactive UI</h1>
-          <div id="show"></div>
+          <div id="show" class="container"></div>
         </div>
       
 
@@ -38,86 +38,103 @@
         </div>
       </div>
     </section>
-    <div class="navbar bg-dark h3 ">Select Items</div>
-    <div class="container card">
+    <div class="navbar container-fluid select h3">SELECT ITEMS</div>
+    <div class="container-fluid">
       <div class="row">
-        <div class="col-6 card">
+                <div class="col-sm-6 form ">
+                    <form action="" class="">
+                        <div class="input">
+                            Name <br>
+                            <input
+                            id="name"
+                              type="text"
+                              name="text"
+                              placeholder=''
+                              required
+                            />
+                        </div>
+                            <div class="input">
+                            Phone Number <br>
+                        <input
+                        id="telephone"
+                          type="tel"
+                          name="phone"
+                          placeholder=''
+                          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required
+                        />
+                            </div>
+                      <div class="input">
+                  Trousers
+                  <br>
+                        <input
+                        id="trousers"
+                          type="number"
+                          name="quantity"
+                          min=""
+                          max="100"
+                          value="0"
+                        />
+                      </div>
+                      <div class="input">
+                          Shirts or Gowns <br>
+                          <input
+                          id="shirts"
+                            type="number"
+                            name="quantity"
+                            min="0"
+                            max="100"
+                            value="0"
+                          />
+                        </div>
+                      <div class="input">
+                      Jacket <br>
+                        <input
+                        id="jacket"
+                          type="number"
+                          name="quantity"
+                          min="0"
+                          max="100"
+                          value="0"
+                        />
+                      </div>
+                      <div class="input">
+                      Others <br>
+                        <input
+                        id="others"
+                          type="number"
+                          name="quantity"
+                          min="0"
+                          max="100"
+                          value="0"
+                        
+                        />
+                      </div>
+                      <button id="button">VIEW ORDER</button>
+                    </form>
+                  </div>
             
-          <form action="" Id="form">
-              <div class="form-group">
-                  Name
-                  <input
-                  id="name"
-                    type="text"
-                    name="text"
-                    placeholder="enterName"
-                    required
-                  />
-                  Phone Number
-              <input
-              id="telephone"
-                type="tel"
-                name="phone"
-                placeholder="Tel"
-                pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required
-              />
-            <div class="">
-              Shirts or Gowns
-              <input
-              id="shirts"
-                type="number"
-                name="quantity"
-                min="0"
-                max="100"
-                value=""
-              />
-            </div>
-            <div class="">
-        Trousers or Skirts
-              <input
-              id="trousers"
-                type="number"
-                name="quantity"
-                min=""
-                max="100"
-                value=""
-              />
-            </div>
-            <div class="">
-             Jacket
-              <input
-              id="jacket"
-                type="number"
-                name="quantity"
-                min="0"
-                max="100"
-                value=""
-              />
-            </div>
-            <div class="">
-             Others
-              <input
-              id="others"
-                type="number"
-                name="quantity"
-                min="0"
-                max="100"
-                value=""
-              
-              />
-            </div>
-            <button id="button">VIEW ORDER</button>
-          </form>
+              <div class="col-sm-6 ">
+                  <div  id ="totalPrice"></div>
+                </div>
+     
         </div>
     </div>
-        <div class="col-6">
-          <div  id ="totalPrice"></div>
-        </div>
-      </div>
-    </div>
-<di>
-  <button onclick="myFunction()" >CHECK OUT</button>
-</di>
+    <button class="open-button" onclick="openForm()">CHECK OUT</button>
+
+<!-- pop up thank you form -->
+<div class="form-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h1>Thank You</h1>
+
+    <h4>You Order has been received, we would get in touch with you as soon as Possible </h4>
+<!-- 
+    <button type="submit" class="btn">Login</button> -->
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
 
     <footer>
         <ul class="">
