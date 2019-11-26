@@ -19,6 +19,8 @@ const displayAmount = document.getElementById("totalPrice");
 
 // eventlisterner
 
+
+
 button.onclick = e => {
   e.preventDefault(e);
   let shirtValue = shirt.value;
@@ -35,12 +37,11 @@ button.onclick = e => {
   // console.log(othersValue);
   // console.log(jacketValue);
   if (
-    shirtValue === "" &&
-    trousersValue === "" &&
-    othersValue === "" &&
-    jacketValue === "" &&
-    nameValue === "" &&
-    telephoneValue === ""
+    shirtValue === "0" &&
+    trousersValue === "0" &&
+    othersValue === "0" &&
+    jacketValue === "0" 
+    
   ) {
     // cound not find a way to make it change on load -display.innerHTML = 'please select quantity'
     window.alert("Please Select Quantity and input information");
@@ -50,9 +51,8 @@ button.onclick = e => {
     shirtValue > 0 &&
     trousersValue > 0 &&
     othersValue > 0 &&
-    jacketValue > 0 &&
-    nameValue !== "" &&
-    telephoneValue !== ""
+    jacketValue > 0 
+   
   ) {
     //ui display
     display.innerHTML = `
