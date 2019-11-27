@@ -8,6 +8,8 @@ const jacket = document.getElementById("jacket");
 
 const others = document.getElementById("others");
 
+const address = document.getElementById("address");
+
 const button = document.getElementById("button");
 
 const display = document.getElementById("show");
@@ -17,7 +19,18 @@ const telephone = document.getElementById("telephone");
 
 const displayAmount = document.getElementById("totalPrice");
 
+
+const checkout = document.getElementById("checkout");
+
+const reloader = document.getElementById("myform");
+
+//checkout button event
+
+
+
+
 // eventlisterner
+
 
 
 
@@ -29,66 +42,47 @@ button.onclick = e => {
   let othersValue = others.value;
   let nameValue = name.value;
   let telephoneValue = telephone.value;
+  let addressValue = address.value
+
 
   display.innerHTML = "";
   displayAmount.innerHTML = "";
-  // console.log(shirtValue);
-  // console.log(trousersValue);
-  // console.log(othersValue);
-  // console.log(jacketValue);
+  if(addressValue === '' ||
+  telephoneValue=== '' ||
+  nameValue === ''){
+    alert('please input personal details')
+  }
+  
   if (
     shirtValue === "0" &&
     trousersValue === "0" &&
     othersValue === "0" &&
     jacketValue === "0" 
-    
+   
   ) {
     // cound not find a way to make it change on load -display.innerHTML = 'please select quantity'
     window.alert("Please Select Quantity and input information");
     //outputs to ui
-  
-  } else if (
-    shirtValue > 0 &&
-    trousersValue > 0 &&
-    othersValue > 0 &&
-    jacketValue > 0 
-   
-  ) {
-    //ui display
-    display.innerHTML = `
-                     <div class= " flex">
-                     <div class="box1">
-                        <img class="displayimage" src ="/images/shirt.png">
-                        
-                        
-                         <img class="displayimage" src ="/images/jacket.png">
-                        </div>
-                        <div class= "box3">
-                        <img class="displayimage" src ="/images/socks.png">
-                     
-                        <img class="displayimage" src ="/images/trousers.png">
-                       </div>
-                    </div>`;
-  } else {
+  } 
     if (shirtValue > 0) {
-      display.innerHTML += ` <div>
-                             <img class=" card displayimagei" src ="/images/shirt.png">
-                            </div>`;
+      display.innerHTML += ` <span >
+                             <img class="  displayimagei" src ="/images/shirt.png">
+                            </span>`;
     }
     if (trousersValue > 0) {
-      display.innerHTML += ` <div>
-                            <img class="card displayimagei" src ="/images/trousers.png">
-                            </div>`;
+      display.innerHTML += ` <span>
+                            <img class="displayimagei" src ="/images/trousers.png">
+                            </span>`;
     }
     if (jacketValue > 0) {
-      display.innerHTML += ` <div >
-                             <img class="card displayimagei" src ="/images/jacket.png">
-                            </div>`;
+      display.innerHTML += ` <span >
+                             <img class="displayimagei" src ="/images/jacket.png">
+                            </span>`;
     }
     if (othersValue > 0) {
-      display.innerHTML += ` <div>
-                             <img class="card displayimagei" src ="/images/socks.png">
-                            </div>`;
+      display.innerHTML += ` <span>
+                             <img class="displayimagei" src ="/images/socks.png">
+                            </span>`;
     }
 
     //price per cost
@@ -104,19 +98,6 @@ button.onclick = e => {
     const totalTrousers = trousersValue * prices.trousersPrice;
     const totalJacket = jacketValue * prices.jacketPrice;
     const totalOthers = othersValue * prices.othersPrice;
-
-    console.log(totalShirt);
-    console.log(prices.shirtPrice);
-    console.log(shirtValue);
-
-    console.log(totalTrousers);
-    console.log(prices.trousersPrice);
-    console.log(trousersValue);
-
-    console.log(totalJacket);
-    console.log(prices.jacketPrice);
-    console.log(jacketValue);
-
     //total price
 
     const totalPrice = totalJacket + totalOthers + totalShirt + totalTrousers;
@@ -131,15 +112,48 @@ button.onclick = e => {
                             </div>`
                            ;
     console.log(totalPrice);
+
+    console.log(addressValue)
+    
+    
   }
-};
-function openForm() {
-  document.getElementById("myForm").style.display = "block";
+checkout.onclick= e => {
+  e.preventDefault(e);
+  let shirtValue = shirt.value;
+  let trousersValue = trousers.value;
+  let jacketValue = jacket.value;
+  let othersValue = others.value;
+  let nameValue = name.value;
+  let telephoneValue = telephone.value;
+  let addressValue = address.value
+
+  if(addressValue === '' ||
+  telephoneValue=== '' ||
+  nameValue === ''
+  ){
+    alert('please input personal details')
+  }if (
+    shirtValue === "0" &&
+    trousersValue === "0" &&
+    othersValue === "0" &&
+    jacketValue === "0" 
+   
+  ) {
+    // cound not find a way to make it change on load -display.innerHTML = 'please select quantity'
+    window.alert("Please Select Quantity and input information");
+    //outputs to ui
+  
+  
+  } else{
+    
+      document.getElementById("myForm").style.display = "block";
+    
+  }
+
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  location.reload(true)
 }
-// function myFunction() {
-//   document.getElementById("field2").value = document.getElementById("form");
-// }
+
+
