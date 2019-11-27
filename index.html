@@ -60,7 +60,7 @@
                           type="tel"
                           name="phone"
                           placeholder=''
-                          pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required
+                          required
                         />
                             </div>
                             <div class="input">
@@ -73,7 +73,8 @@
                             required
                           />
                               </div>
-                      <div class="input">
+                              <div class="flex">
+                      <div class="input box1">
                   Trousers
                   <br>
                         <input
@@ -85,7 +86,7 @@
                           value="0"
                         />
                       </div>
-                      <div class="input">
+                      <div class="input box2">
                           Shirts or Gowns <br>
                           <input
                           id="shirts"
@@ -96,7 +97,9 @@
                             value="0"
                           />
                         </div>
-                      <div class="input">
+                      </div>
+                      <div class="flex">
+                      <div class="input box1">
                       Jacket <br>
                         <input
                         id="jacket"
@@ -107,7 +110,7 @@
                           value="0"
                         />
                       </div>
-                      <div class="input">
+                      <div class="input box2">
                       Others <br>
                         <input
                         id="others"
@@ -119,7 +122,12 @@
                         
                         />
                       </div>
-                      <button id="button">VIEW ORDER</button>
+                     
+                      </div>
+                      <div>
+                        <input id="button" type="submit" value="VIEW ORDERS">
+                      </div>
+                      <!-- <button id="button">VIEW ORDER</button> -->
                     </form>
                   </div>
             
@@ -129,7 +137,7 @@
      
         </div>
     </div>
-    <button class="open-button" id="totalPric" onclick="openForm()">CHECK OUT</button>
+    <button class="open-button" id="checkout" onclick="openForm()">CHECK OUT</button>
 
 <!-- pop up thank you form -->
 <div class="form-popup container" id="myForm">

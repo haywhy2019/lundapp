@@ -8,6 +8,8 @@ const jacket = document.getElementById("jacket");
 
 const others = document.getElementById("others");
 
+const address = document.getElementById("address");
+
 const button = document.getElementById("button");
 
 const display = document.getElementById("show");
@@ -17,7 +19,18 @@ const telephone = document.getElementById("telephone");
 
 const displayAmount = document.getElementById("totalPrice");
 
+
+const checkout = document.getElementById("checkout");
+
+const reloader = document.getElementById("myform");
+
+//checkout button event
+
+
+
+
 // eventlisterner
+
 
 
 
@@ -29,25 +42,33 @@ button.onclick = e => {
   let othersValue = others.value;
   let nameValue = name.value;
   let telephoneValue = telephone.value;
+  let addressValue = address.value
+
 
   display.innerHTML = "";
   displayAmount.innerHTML = "";
-  // console.log(shirtValue);
+  console.log(addressValue);
   // console.log(trousersValue);
   // console.log(othersValue);
   // console.log(jacketValue);
+  
   if (
     shirtValue === "0" &&
     trousersValue === "0" &&
     othersValue === "0" &&
-    jacketValue === "0" 
+    jacketValue === "0" &&
+    addressValue === '' &&
+    telephoneValue === '' &&
+    nameValue === ''
+
     
   ) {
     // cound not find a way to make it change on load -display.innerHTML = 'please select quantity'
     window.alert("Please Select Quantity and input information");
     //outputs to ui
   
-  } else if (
+  } 
+   else if (
     shirtValue > 0 &&
     trousersValue > 0 &&
     othersValue > 0 &&
@@ -91,6 +112,10 @@ button.onclick = e => {
                             </div>`;
     }
 
+  
+    
+     
+
     //price per cost
     const prices = {
       shirtPrice: 200,
@@ -133,13 +158,28 @@ button.onclick = e => {
     console.log(totalPrice);
   }
 };
+
+// reload.addEventListener('click', refresh)
+
+// function refresh(e){
+//   e.preventDefault(e);
+//   window.reload()
+// }
+
+  
+    
 function openForm() {
   document.getElementById("myForm").style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("myForm").style.display = "none";
+  location.reload(true)
 }
+// function closeForm() {
+//   document.getElementById("myForm").style.display = "none";
+// }
 // function myFunction() {
 //   document.getElementById("field2").value = document.getElementById("form");
 // }
+
+// 
