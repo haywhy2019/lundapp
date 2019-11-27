@@ -24,16 +24,17 @@
           <h1>How to use</h1>
           <h3>Instructions</h3>
           <ol>
-          <li> click on what you want to wash</li>
-          <li>others incluses cloths like underwears, handkerchief etc</li>
-          <li>use the buttons below to add or subtract from it</li>
-          <li>Click view order to view your order and cost of service</li>
+          <li>Fill the name, address and phone number labels.</li>
+          <li>Select what you want to wash.</li>
+          <li>Others includes cloths like underwears, handkerchief etc.</li>
+          <li>Use the labels named shirts, trousers, others and jacket to choose quantity and type.</li>
+          <li>Click vieworder to view your order and cost of service.</li>
           
           <li>
             click checkout when you are through picking the cloths you want to
-            wash
+            wash.
           </li>
-          <li>Made an error? click LUNDAPP to start afresh</li>
+          <li>Made an error? click LUNDAPP to start afresh.</li>
         </ol>
         </div>
       </div>
@@ -49,6 +50,7 @@
                             id="name"
                               type="text"
                               name="text"
+                              value=""
                               placeholder=''
                               required
                             />
@@ -57,8 +59,9 @@
                             Phone Number <br>
                         <input
                         id="telephone"
-                          type="tel"
+                          type="number"
                           name="phone"
+                          value=""
                           placeholder=''
                           required
                         />
@@ -69,6 +72,7 @@
                           id="address"
                             type="text"
                             name="text"
+                            value= ""
                             placeholder=''
                             required
                           />
@@ -125,9 +129,9 @@
                      
                       </div>
                       <div>
-                        <input id="button" type="submit" value="VIEW ORDERS">
+                        <!-- <input id="button" type="submit" value="VIEW ORDERS"> -->
                       </div>
-                      <!-- <button id="button">VIEW ORDER</button> -->
+                      <button id="button">VIEW ORDER</button>
                     </form>
                   </div>
             
@@ -137,7 +141,7 @@
      
         </div>
     </div>
-    <button class="open-button" id="checkout" onclick="openForm()">CHECK OUT</button>
+    <button class="open-button" id="checkout">CHECK OUT</button>
 
 <!-- pop up thank you form -->
 <div class="form-popup container" id="myForm">
