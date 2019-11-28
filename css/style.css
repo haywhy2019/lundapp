@@ -13,7 +13,7 @@
 }
 .header {
     height: 300px;
-    margin-left: 260px;
+   margin-left: 260px;
 }
 
 .flex{
@@ -263,9 +263,14 @@ ul{
     }
     .how{
         height: auto;
+        border: none;
     }
     .flex{
         display: block;
        
     }
+    .select{
+       margin-top: 20px;
+    }
+    
   }
