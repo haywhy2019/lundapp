@@ -66,22 +66,22 @@ button.onclick = e => {
   } 
     if (shirtValue > 0) {
       display.innerHTML += ` <span >
-                             <img class="  displayimagei" src ="/images/shirt.png">
+                             <img class="  displayimagei" src ="images/shirt.png">
                             </span>`;
     }
     if (trousersValue > 0) {
       display.innerHTML += ` <span>
-                            <img class="displayimagei" src ="/images/trousers.png">
+                            <img class="displayimagei" src ="images/trousers.png">
                             </span>`;
     }
     if (jacketValue > 0) {
       display.innerHTML += ` <span >
-                             <img class="displayimagei" src ="/images/jacket.png">
+                             <img class="displayimagei" src ="images/jacket.png">
                             </span>`;
     }
     if (othersValue > 0) {
       display.innerHTML += ` <span>
-                             <img class="displayimagei" src ="/images/socks.png">
+                             <img class="displayimagei" src ="images/socks.png">
                             </span>`;
     }
 
