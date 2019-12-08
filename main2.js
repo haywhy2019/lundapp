@@ -61,7 +61,7 @@ button.onclick = e => {
    
   ) {
     // cound not find a way to make it change on load -display.innerHTML = 'please select quantity'
-    window.alert("Please Select Quantity and input information");
+    alert("Please Select Quantity");
     //outputs to ui
   } 
     if (shirtValue > 0) {
